@@ -1,0 +1,62 @@
+@import 'tailwindcss';
+@import './fonts.css';
+
+/* ---------------------------------------------------------------------------
+ * Design tokens extraidos do Figma (-LAYER- Totem B2B Summit).
+ * Os valores em px sao os do layout de 1920x1080 e nao devem ser arredondados:
+ * o TotemStage escala tudo proporcionalmente a partir dali.
+ * ------------------------------------------------------------------------- */
+@theme {
+  /* Acentos de marca. "Amarelo" e "Roxo Claro" sao variaveis nomeadas no Figma. */
+  --color-accent-pink: #ef107e;
+  --color-accent-yellow: #f9c214;
+  --color-accent-purple: #b869ff;
+
+  /* Superficie de vidro dos cards */
+  --color-glass-surface: rgb(204 204 204 / 0.1);
+  --color-glass-border: rgb(255 255 255 / 0.4);
+
+  --color-space-void: #000000;
+
+  /* Fonte licenciada da marca; @font-face em src/app/fonts.css */
+  --font-display: 'Logirent', 'Archivo', 'Franklin Gothic Medium', 'Arial Black', sans-serif;
+  --font-body: 'Montserrat', system-ui, sans-serif;
+
+  /* Brilho interno das bordas de vidro (Figma: inset 0 0 27.7px rgba(255,255,255,0.15)) */
+  --shadow-glass-inset: inset 0 0 27.7px 0 rgb(255 255 255 / 0.15);
+}
+
+/* Ativada pelo TotemStage quando o totem esta na orientacao retrato. */
+@custom-variant portrait (&:where([data-orientation='portrait'] *));
+
+@layer base {
+  html,
+  body {
+    height: 100%;
+    background-color: var(--color-space-void);
+    color: #ffffff;
+    font-family: var(--font-body);
+  }
+
+  /* Endurecimento para operacao em kiosk: sem selecao de texto, sem zoom por
+   * gesto, sem realce de toque, sem arraste de imagem e sem overscroll. */
+  body {
+    overflow: hidden;
+    overscroll-behavior: none;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  img,
+  svg,
+  canvas {
+    -webkit-user-drag: none;
+  }
+
+  /* O totem nao tem mouse. Em desenvolvimento o cursor continua visivel. */
+  body[data-kiosk='true'] {
+    cursor: none;
+  }
+}
