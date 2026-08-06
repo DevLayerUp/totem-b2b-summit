@@ -1,0 +1,40 @@
+{
+  "name": "totem-b2b-summit",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Totem interativo da Layer Up para o B2B Summit",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "@react-three/fiber": "^9.7.0",
+    "gsap": "^3.15.0",
+    "next": "^16.3.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "three": "^0.185.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.6",
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^22.15.3",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@types/three": "^0.185.4",
+    "eslint": "^9.39.1",
+    "eslint-config-next": "^16.3.0",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.6.14",
+    "tailwindcss": "^4.3.3",
+    "typescript": "~5.9.3"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}

@@ -1,0 +1,19 @@
+/node_modules
+/.next
+/out
+/build
+
+npm-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+.env
+.env*.local
+
+.DS_Store
+*.pem
+next-env.d.ts
+tsconfig.tsbuildinfo
+
+# Referencias visuais baixadas do Figma para conferencia de fidelidade
+/.figma-refs
