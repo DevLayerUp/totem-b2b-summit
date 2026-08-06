@@ -7,6 +7,7 @@ import { useGSAP } from '@/lib/motion/gsap';
 import { revealBackground, setPointer } from '@/lib/motion/motionTargets';
 import { DecorQuad } from './DecorQuad';
 import { NebulaField } from './NebulaField';
+import { NebulaVideo } from './NebulaVideo';
 import { useActiveScene } from './sceneStore';
 
 /**
@@ -40,12 +41,13 @@ export function SpaceBackground() {
 
   return (
     <div aria-hidden className="fixed inset-0" style={{ zIndex: 'var(--z-background)' }}>
+      <NebulaVideo />
       <Canvas
         flat
         orthographic
         camera={{ position: [0, 0, 100], zoom: 1, near: 0.1, far: 1000 }}
         dpr={[1, 1.5]}
-        gl={{ antialias: false, alpha: false, powerPreference: 'high-performance' }}
+        gl={{ antialias: false, alpha: true, powerPreference: 'high-performance' }}
       >
         <NebulaField />
         <Suspense fallback={null}>

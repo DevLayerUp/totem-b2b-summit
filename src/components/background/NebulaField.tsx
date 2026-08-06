@@ -14,7 +14,6 @@ interface NebulaUniforms {
   uTime: IUniform<number>;
   uResolution: IUniform<Vector2>;
   uIntensity: IUniform<number>;
-  uPointer: IUniform<Vector2>;
   uAccent: IUniform<Color>;
   uAccentStrength: IUniform<number>;
 }
@@ -24,18 +23,19 @@ function createNebulaUniforms(): NebulaUniforms {
     uTime: { value: 0 },
     uResolution: { value: new Vector2(1, 1) },
     uIntensity: { value: 1 },
-    uPointer: { value: new Vector2(0, 0) },
     uAccent: { value: new Color(0.937, 0.063, 0.494) },
     uAccentStrength: { value: 0 },
   };
 }
 
 /**
- * Plano que cobre toda a tela fisica com o campo de estrelas e a nebulosa.
+ * Plano que cobre toda a tela fisica com o campo de estrelas e o realce de
+ * toque, por cima do video da nebulosa (`NebulaVideo`).
  *
  * Fica atras do palco e ocupa a viewport inteira, e nao a area do palco: em
  * telas fora de 16:9 o conteudo e encaixotado, mas o fundo continua sangrando
- * ate a borda.
+ * ate a borda. O material e transparente de proposito — e o que deixa o
+ * video aparecer por baixo nas regioes sem estrela nem realce.
  */
 export function NebulaField() {
   const materialRef = useRef<ShaderMaterial>(null);
@@ -54,7 +54,6 @@ export function NebulaField() {
 
     uniforms.uTime.value += delta;
     uniforms.uResolution.value.set(width, height);
-    uniforms.uPointer.value.set(motionTargets.pointerX, motionTargets.pointerY);
     uniforms.uIntensity.value = motionTargets.auroraIntensity * motionTargets.revealProgress;
     uniforms.uAccentStrength.value = motionTargets.accentStrength;
     uniforms.uAccent.value.setRGB(
@@ -72,6 +71,7 @@ export function NebulaField() {
         uniforms={initialUniforms}
         vertexShader={nebulaVertexShader}
         fragmentShader={nebulaFragmentShader}
+        transparent
         depthTest={false}
         depthWrite={false}
       />
