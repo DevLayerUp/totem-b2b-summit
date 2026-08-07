@@ -107,3 +107,15 @@ export const METODOLOGIAS_SCENE: Scene = {
     },
   ],
 };
+
+/**
+ * Telas de detalhe de metodologia (ex.: node 2093:954 — BRAND NEW LAYER).
+ *
+ * O pedido foi explicito: o fundo aqui e "bem mais simples que o da home",
+ * so o video da nebulosa e o starfield — sem esferas nem orbitas recortando
+ * a cena.
+ */
+export const METODOLOGIA_DETALHE_SCENE: Scene = {
+  id: 'metodologia-detalhe',
+  decor: [],
+};

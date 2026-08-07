@@ -49,7 +49,10 @@ export function ScreenHeader({ backHref }: ScreenHeaderProps) {
               style={{ transform: 'rotate(-135deg)' }}
             />
           </span>
-          <span className="font-display text-[25px] font-bold tracking-[3px] whitespace-nowrap text-white">
+          {/* Node 2026:101 fixa essa linha em 24px. Sem isso a altura "normal" da
+           * Logirent (bem mais alta que o cap-height) infla a pilula e desalinha
+           * o centro dela com o botao circular da Home ao lado. */}
+          <span className="font-display text-[25px] leading-[24px] font-bold tracking-[3px] whitespace-nowrap text-white">
             VOLTAR
           </span>
         </GlassCard>

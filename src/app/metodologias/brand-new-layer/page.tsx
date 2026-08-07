@@ -1,5 +1,5 @@
-import { PlaceholderScreen } from '@/components/screens/PlaceholderScreen';
+import { BrandNewLayerScreen } from '@/components/screens/brand-new-layer/BrandNewLayerScreen';
 
 export default function BrandNewLayerPage() {
-  return <PlaceholderScreen title={['BRaND NeW LaYeR']} accent="rose" />;
+  return <BrandNewLayerScreen />;
 }
