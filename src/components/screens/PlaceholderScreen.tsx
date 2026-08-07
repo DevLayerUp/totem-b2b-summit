@@ -45,7 +45,7 @@ export function PlaceholderScreen({ title, accent }: PlaceholderScreenProps) {
     <ScreenRoot ref={rootRef} className="flex items-center justify-center">
       <button type="button" onClick={() => navigate('/')} className="cursor-pointer text-left">
         <GlassCard data-animate="panel" className="flex flex-col gap-[46px] px-[80px] py-[80px]">
-          <h1 className="font-display text-[72px] leading-[normal] text-white">
+          <h1 className="font-display text-[72px] leading-[normal] font-bold text-white">
             {title.map((line, index) => (
               <span key={`${line}-${index}`} className="block">
                 {line}

@@ -86,3 +86,24 @@ export const START_SCENE: Scene = {
     },
   ],
 };
+
+/** Node 2093:670 — TELA 2 - METODOLOGIAS. */
+export const METODOLOGIAS_SCENE: Scene = {
+  id: 'metodologias',
+  decor: [
+    {
+      // Node 2093:672 — a mesma esfera "conexao", agora recortada na borda esquerda.
+      id: 'conexao-metodologias',
+      texture: '/assets/spheres/conexao.png',
+      x: -328,
+      y: 20,
+      width: 920,
+      height: 920,
+      parallaxDepth: 0.5,
+      driftAmplitude: 14,
+      driftPeriod: 28,
+      pulseAmplitude: 0.03,
+      pulsePeriod: 11,
+    },
+  ],
+};

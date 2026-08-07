@@ -64,7 +64,7 @@ export function StartCard({ content, decoration }: StartCardProps) {
 
         <div className="relative flex flex-col gap-[30px] text-white">
           <h2
-            className="font-display text-[48px] leading-[normal] break-words"
+            className="font-display text-[48px] leading-[normal] font-bold break-words"
             style={{ width: TITLE_WIDTH }}
           >
             {content.title.map((line, index) => (

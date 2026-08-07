@@ -7,10 +7,11 @@
  * o TotemStage escala tudo proporcionalmente a partir dali.
  * ------------------------------------------------------------------------- */
 @theme {
-  /* Acentos de marca. "Amarelo" e "Roxo Claro" sao variaveis nomeadas no Figma. */
+  /* Acentos de marca. "Amarelo", "Roxo Claro" e "Rosa Claro" sao variaveis nomeadas no Figma. */
   --color-accent-pink: #ef107e;
   --color-accent-yellow: #f9c214;
   --color-accent-purple: #b869ff;
+  --color-accent-rose: #ff77ba;
 
   /* Superficie de vidro dos cards */
   --color-glass-surface: rgb(204 204 204 / 0.1);

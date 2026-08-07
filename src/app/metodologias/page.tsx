@@ -1,5 +1,5 @@
-import { PlaceholderScreen } from '@/components/screens/PlaceholderScreen';
+import { MetodologiasScreen } from '@/components/screens/metodologias/MetodologiasScreen';
 
 export default function MetodologiasPage() {
-  return <PlaceholderScreen title={['METODOLOGIaS', 'PROPRIETÁRIAS']} accent="pink" />;
+  return <MetodologiasScreen />;
 }

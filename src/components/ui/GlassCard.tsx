@@ -1,5 +1,10 @@
 import type { ComponentPropsWithRef } from 'react';
 
+interface GlassCardProps extends ComponentPropsWithRef<'div'> {
+  /** Raio da borda. Cards usam o padrao (10px); pilulas e circulos passam 100. */
+  rounded?: number | string;
+}
+
 /**
  * Superficie de vidro do design system do totem.
  *
@@ -11,11 +16,12 @@ import type { ComponentPropsWithRef } from 'react';
  * `backdrop-filter` para de enxergar o fundo se um ancestral ganhar `opacity`
  * ou `filter`, entao opacidade e escala sao aplicadas aqui, nunca num wrapper.
  */
-export function GlassCard({ children, className, ...props }: ComponentPropsWithRef<'div'>) {
+export function GlassCard({ children, className, style, rounded = 10, ...props }: GlassCardProps) {
   return (
     <div
       {...props}
-      className={`border-glass-border bg-glass-surface shadow-glass-inset relative overflow-hidden rounded-[10px] border backdrop-blur-[20px] ${className ?? ''}`}
+      className={`border-glass-border bg-glass-surface shadow-glass-inset relative overflow-hidden border backdrop-blur-[20px] ${className ?? ''}`}
+      style={{ borderRadius: rounded, ...style }}
     >
       {children}
     </div>
