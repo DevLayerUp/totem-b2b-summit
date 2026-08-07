@@ -1,5 +1,5 @@
-import { PlaceholderScreen } from '@/components/screens/PlaceholderScreen';
+import { EraDaPresencaScreen } from '@/components/screens/era-da-presenca/EraDaPresencaScreen';
 
 export default function EraDaPresencaPage() {
-  return <PlaceholderScreen title={['eRa Da PReSeNÇa']} accent="purple" />;
+  return <EraDaPresencaScreen />;
 }

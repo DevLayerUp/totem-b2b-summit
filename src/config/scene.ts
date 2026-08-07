@@ -174,3 +174,42 @@ export const CONSTELACAO_MARKETING_SCENE: Scene = {
     },
   ],
 };
+
+/**
+ * Decor das 2 etapas do node 2132 — TELA 2.3 - ERA DA PRESENÇA.
+ *
+ * "EXPLORAÇÃO 1" e "PROJEÇÃO 3" aparecem nas mesmas coordenadas nas 6 telas
+ * do Figma (trilha de eras e os 3 fundamentos), entao ficam fixas nas 2
+ * etapas do stepper, sem precisar de cenas separadas por etapa.
+ */
+export const ERA_DA_PRESENCA_SCENE: Scene = {
+  id: 'era-da-presenca',
+  decor: [
+    {
+      id: 'exploracao-era-presenca',
+      texture: '/assets/spheres/exploracao.png',
+      x: 1612.94,
+      y: 1091,
+      width: 299,
+      height: 310,
+      parallaxDepth: 0.4,
+      driftAmplitude: 10,
+      driftPeriod: 22,
+      pulseAmplitude: 0.03,
+      pulsePeriod: 9,
+    },
+    {
+      id: 'projecao-era-presenca',
+      texture: '/assets/spheres/projecao.png',
+      x: -545,
+      y: -468,
+      width: 609,
+      height: 595,
+      parallaxDepth: 0.5,
+      driftAmplitude: 14,
+      driftPeriod: 25,
+      pulseAmplitude: 0.03,
+      pulsePeriod: 10,
+    },
+  ],
+};
