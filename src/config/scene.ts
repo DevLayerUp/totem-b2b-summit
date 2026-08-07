@@ -119,3 +119,58 @@ export const METODOLOGIA_DETALHE_SCENE: Scene = {
   id: 'metodologia-detalhe',
   decor: [],
 };
+
+/**
+ * Decor das 4 etapas do node 2100 — TELA 2.2 - CONSTELAÇÃO DE MKT.
+ *
+ * "EXPLORAÇÃO 1" e "PROJEÇÃO 3" aparecem nas mesmas coordenadas nas 4 telas
+ * do Figma (os 3 slides de estatistica e o slide de bio/video); "PROJEÇÃO 3"
+ * reaproveita a mesma arte de `projecao.png` (hash identico ao exportado). No
+ * Figma "CONQUISTA 1" so aparece no primeiro slide, mas por pedido do
+ * usuario ela fica visivel nas 4 etapas, para o fundo nao "pular" uma esfera
+ * grande a cada troca de slide.
+ */
+export const CONSTELACAO_MARKETING_SCENE: Scene = {
+  id: 'constelacao-marketing',
+  decor: [
+    {
+      id: 'exploracao',
+      texture: '/assets/spheres/exploracao.png',
+      x: 1612.94,
+      y: 1091,
+      width: 299,
+      height: 310,
+      parallaxDepth: 0.4,
+      driftAmplitude: 10,
+      driftPeriod: 22,
+      pulseAmplitude: 0.03,
+      pulsePeriod: 9,
+    },
+    {
+      id: 'projecao-constelacao',
+      texture: '/assets/spheres/projecao.png',
+      x: -545,
+      y: -468,
+      width: 609,
+      height: 595,
+      parallaxDepth: 0.5,
+      driftAmplitude: 14,
+      driftPeriod: 25,
+      pulseAmplitude: 0.03,
+      pulsePeriod: 10,
+    },
+    {
+      id: 'conquista',
+      texture: '/assets/spheres/conquista.png',
+      x: 1455,
+      y: -46,
+      width: 759,
+      height: 759,
+      parallaxDepth: 0.5,
+      driftAmplitude: 16,
+      driftPeriod: 24,
+      pulseAmplitude: 0.03,
+      pulsePeriod: 10,
+    },
+  ],
+};

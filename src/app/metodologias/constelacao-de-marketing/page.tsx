@@ -1,5 +1,5 @@
-import { PlaceholderScreen } from '@/components/screens/PlaceholderScreen';
+import { ConstelacaoMarketingScreen } from '@/components/screens/constelacao-marketing/ConstelacaoMarketingScreen';
 
 export default function ConstelacaoDeMarketingPage() {
-  return <PlaceholderScreen title={['CONSTeLaÇãO DE MaRKeTING']} accent="yellow" />;
+  return <ConstelacaoMarketingScreen />;
 }
